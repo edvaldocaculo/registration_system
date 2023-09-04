@@ -1,0 +1,29 @@
+{% extends 'global/base.html' %}
+
+{% block content %}
+  <h3 class="text-center mt-3">Formulario de cadastro</h3>
+<hr>
+<form action="{{form_action}}" method="POST" >
+      {% csrf_token %}
+      <div class="container">
+            <div class="card p-3">
+            {% for user in form %}
+            <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                        <label for="user.label_for_id" class="input-group-text">{{user.label}}</label>
+                  </div>
+                  {{user}}
+            </div>
+            {% endfor %}
+            <div class="form-group">
+                  <button class="btn btn-outline-danger mr-2"  type="reset" >Cancelar</button>
+                  <button class="btn btn-outline-primary d-block-md">Enviar</button>
+            </div>
+            
+            </div>
+      </div>
+</form>
+{% endblock content %}
+
+
+

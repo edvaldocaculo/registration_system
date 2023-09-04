@@ -1,0 +1,35 @@
+{% extends 'global/base.html' %}
+
+{% block content %}
+      
+      <div class="container py-3">
+            <div class="row">
+                  
+                  <table class="table-responsive table-striped">
+                        <thead class="table-dark text-white border border-primary">
+                              <tr >
+                                    <th class="p-3" >#</th>
+                                    <th class="p-3" >NOME</th>
+                                    <th class="p-3">SOBRENOME</th>
+                                    <th class="p-3">CPF</th>
+                                    <th class="p-3">REMUNERAÇÃO</th>
+                                    <th class="p-3">TEMPO DE SERVIÇO</th>
+                              </tr>
+                        </thead>
+                        <tbody class="border border-primary" >
+                              {% for funcionario in funcionarios %}
+                                    <tr>
+                                          <td class="p-3">{{funcionario.id}}</td>
+                                          <td class="p-3">{{funcionario.nome}}</td>
+                                          <td class="p-3">{{funcionario.sobrenome}}</td>
+                                          <td class="p-3">{{funcionario.cpf}}</td>
+                                          <td class="p-3">{{funcionario.remuneracao}} R$</td>
+                                          <td class="p-3">{{funcionario.tempo_de_servico}}</td>
+                                    </tr>
+                              {% endfor %}
+                        </tbody>
+                  </table>
+            </div>
+      </div>
+      
+      {% endblock content %}

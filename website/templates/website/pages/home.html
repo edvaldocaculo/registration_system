@@ -1,0 +1,27 @@
+{% extends 'global/base.html' %}
+
+{% block content %}
+ 
+<div class="container py-3 text-center">
+      <div class="row">
+            <div class="col-sm-6 col-xs-12">
+                  <div class="card">
+                        <div class="card-body">
+                              <h5 class="card-title">Cadastrar funcionario</h5>
+                              <p class="card-text">cadastre aqui um novo <code> Funcionario</code></p>
+                              <a href="{% url 'website:cadastrarViews' %}" class="btn btn-outline-primary">novo funcionario</a>
+                        </div>
+                  </div>
+            </div>
+            <div class="col-sm-6 col-xs-12">
+                  <div class="card">
+                        <div class="card-body">
+                              <h5 class="card-title">Lista de funcionarios</h5>
+                              <p class="card-text">Veja aqui a lista de <code>Funcionarios</code> cadastrados</p>
+                              <a href="{% url 'website:listar_fun' %}" class="btn btn-outline-primary">Vá para lista de funcionarios</a>
+                        </div>
+                  </div>
+            </div>
+      </div>
+</div>
+ {% endblock content %}

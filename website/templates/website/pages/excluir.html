@@ -1,0 +1,7 @@
+<form action="{{form_action}}" metho='POST' >
+      {% csrf_token %}
+      <p>Você tem certeza que deseja apagar o funcionario <strong style="color:blue" > {{funcionario.nome}} {{funcionario.sobrenome}}</strong></p>
+
+      <button><a href="{% url 'website:excluir_fun' %}">Cancelar</a></button>
+      <button>Excluir</button>
+</form>
